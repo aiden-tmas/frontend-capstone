@@ -1,0 +1,17 @@
+.App {
+  margin: none;
+  height: 100%;
+  width: 100%;
+
+  .navbar {
+    display: flex;
+    width: 80%;
+    height: 75px;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 20px;
+    .navlink {
+      text-decoration: none;
+    }
+  }
+}
