@@ -3,7 +3,6 @@ import { useState, createContext } from "react";
 export const CartContext = createContext();
 
 export default function CartProvider({ children }) {
-  console.log(children);
   const [cart, setCart] = useState([]);
 
   function getTotal() {
@@ -32,7 +31,6 @@ export default function CartProvider({ children }) {
     clearCart,
     getTotal,
   };
-  console.log(cart);
 
   return (
     <CartContext.Provider value={cartState}>{children}</CartContext.Provider>

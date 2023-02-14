@@ -8,7 +8,6 @@ export default function Product(props) {
 
   return (
     <div className={"products"}>
-      {console.log(addProduct)}
       <RenderProduct
         addProduct={addProduct}
         id={`${props.match.params.prod_id}`}
@@ -16,5 +15,4 @@ export default function Product(props) {
       ;
     </div>
   );
-  // return <RenderProduct id={`${props.match.params.prod_id}`} />;
 }

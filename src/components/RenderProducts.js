@@ -2,13 +2,9 @@ import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 
 import Truncate from "../helpers/truncate";
-// import { CartContext } from "../context/CartProvider";
 
-// export const productContext = createContext();
-
-export default function RenderItems(props) {
+export default function RenderProducts(props) {
   const [products, setProducts] = useState([]);
-  // const { addProduct } = useContext(CartContext);
 
   useEffect(() => {
     fetch("https://fakestoreapi.com/products/")
@@ -18,7 +14,7 @@ export default function RenderItems(props) {
   }, []);
 
   return products.map((product) => {
-    return (
+    return props.category === "all" ? (
       <div className="product-card">
         <div key={product.id} className="product">
           <NavLink className="product-link" to={`/product/${product.id}`}>
@@ -43,6 +39,33 @@ export default function RenderItems(props) {
           </div>
         </div>
       </div>
+    ) : product.category === props.category ? (
+      <div className="product-card">
+        <div key={product.id} className="product">
+          <NavLink className="product-link" to={`/product/${product.id}`}>
+            <div className="product-wrapper">
+              <img className="image" src={product.image} alt="item"></img>
+              <div className="title">{Truncate(product.title, 40)}</div>
+              <br />
+              <div className="price">${product.price.toFixed(2)}</div>
+              <br />
+              <div className="description">
+                {Truncate(product.description, 100)}
+              </div>
+            </div>
+          </NavLink>
+          <div className="button-wrapper">
+            <button
+              className="add-to-cart-button"
+              onClick={() => props.addProduct(product)}
+            >
+              Add To Cart
+            </button>
+          </div>
+        </div>
+      </div>
+    ) : (
+      <div></div>
     );
   });
 }

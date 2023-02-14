@@ -3,14 +3,13 @@ import { useEffect, useState } from "react";
 
 export default function RenderProduct(props) {
   const [product, setProduct] = useState({});
-  console.log(props.id);
 
   useEffect(() => {
     fetch(`https://fakestoreapi.com/products/${props.id}`)
       .then((res) => res.json())
       .then((data) => setProduct(data))
       .catch((err) => {
-        console.error("get merch error: ", err);
+        console.error("Get merch error: ", err);
       });
   }, [props.id]);
 

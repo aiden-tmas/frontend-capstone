@@ -1,10 +1,8 @@
 import { useContext } from "react";
 import { CartContext } from "../context/CartProvider";
 
-let total = 0;
 function renderCart(cart) {
   return cart.map((product) => {
-    console.log(total);
     return (
       <div>
         <h4>{product.title}</h4>
