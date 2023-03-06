@@ -1,0 +1,62 @@
+.main-container {
+  width: 100%;
+  height: 100%;
+  .hero-container {
+    display: flex;
+    height: 40vw;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3)),
+      url("../images/john-towner-JgOeRuGD_Y4-unsplash.jpg");
+    background-size: cover;
+    color: rgb(225, 225, 225);
+  }
+  .main-content {
+    height: 75vw;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto auto;
+    .category-wrapper {
+      display: grid;
+      grid-template-columns: 50% 50%;
+      .text-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2rem;
+        background-color: black;
+        color: rgb(225, 225, 225);
+      }
+      .image-container {
+        display: flex;
+        .mens-clothing {
+          height: 100%;
+          width: 100%;
+          background-image: url("../images/waldemar-NPPNHZK1U0s-unsplash.jpg");
+          background-size: cover;
+        }
+        .womens-clothing {
+          height: 100%;
+          width: 100%;
+          background-image: url("../images/hannah-morgan-ycVFts5Ma4s-unsplash.jpg");
+          background-size: cover;
+        }
+        .jewelry {
+          height: 100%;
+          width: 100%;
+          background-image: url("../images/sabrianna-Y_bxfTa_iUA-unsplash.jpg");
+          background-size: cover;
+          background-position-y: -70px;
+        }
+        .electronics {
+          height: 100%;
+          width: 100%;
+          background-image: url("../images/onur-binay-_RpPMkqTTTg-unsplash.jpg");
+          background-size: cover;
+          background-position-y: -70px;
+        }
+      }
+    }
+  }
+}
