@@ -45,6 +45,30 @@ export default function App() {
                 <Route path={"/cart"} component={Cart} />
               </Switch>
             </div>
+
+            <div className="footer">
+              <div className="left-column">
+                <div className="left-content">
+                  <p>Marcdown Company</p>
+                  <p>308 Negra Arroyo Lane</p>
+                  <p>Albequerque, NM</p>
+                </div>
+              </div>
+              <div className="middle-column">
+                <div className="middle-content">
+                  <NavLink className={"navlink"} to={"/home"}>
+                    Home
+                  </NavLink>
+                </div>
+              </div>
+              <div className="right-column">
+                <div className="right-content">
+                  <p>Aiden Thomas </p>
+                  <p>CEO, Founder</p>
+                  <p>Marcdown Co</p>
+                </div>
+              </div>
+            </div>
           </CartProvider>
         </BrowserRouter>
       </div>
