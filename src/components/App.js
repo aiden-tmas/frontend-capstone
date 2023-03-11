@@ -1,7 +1,6 @@
 // import { useEffect, useState, useContext, createContext } from "react";
 import { BrowserRouter, Switch, Route, NavLink } from "react-router-dom";
 
-// import "../styles/main.scss";
 import "../styles/app.scss";
 import About from "../pages/About";
 import Cart from "../pages/Cart";

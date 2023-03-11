@@ -1,0 +1,65 @@
+.main-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  .main-header {
+    font-size: xx-large;
+    padding-left: 30px;
+  }
+
+  .form-container {
+    padding-left: 30px;
+    form {
+      padding-bottom: 20px;
+      .contact-info {
+        display: flex;
+        .name {
+          width: 20%;
+        }
+
+        .email-phone {
+          width: 20%;
+        }
+      }
+
+      .input-field {
+        padding-bottom: 45px;
+        .first-name-field {
+          width: 85%;
+          font-size: 1.5rem;
+          size: 25;
+        }
+
+        .last-name-field {
+          width: 85%;
+          font-size: 1.5rem;
+          size: 25;
+        }
+
+        .email-field {
+          width: 85%;
+          font-size: 1.5rem;
+          size: 25;
+        }
+
+        .phone-field {
+          width: 85%;
+          font-size: 1.5rem;
+          size: 25;
+        }
+
+        .comments-field {
+          font-size: 1rem;
+        }
+      }
+
+      .submit-button-container {
+        width: 100%;
+        height: 100%;
+        .submit-button {
+          padding: 50px;
+        }
+      }
+    }
+  }
+}

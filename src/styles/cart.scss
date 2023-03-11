@@ -1,0 +1,30 @@
+.product-card {
+  margin-left: 2%;
+  border: 0.5px solid rgb(73, 73, 73);
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  align-items: center;
+  margin-block: 30px;
+
+  .description {
+    margin-left: 2%;
+  }
+
+  .image {
+    width: 80%;
+    height: 50%;
+  }
+}
+
+.checkout-section {
+  margin-left: 2%;
+  .buttons {
+    display: flex;
+    width: 15%;
+    justify-content: space-around;
+    button {
+      width: 40%;
+    }
+  }
+}

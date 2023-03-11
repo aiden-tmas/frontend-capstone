@@ -1,0 +1,12 @@
+.main-container {
+  display: flex;
+  flex-direction: column;
+  height: 45vw;
+  color: rgb(225, 225, 225);
+  .section-container {
+    padding-block: 30px;
+    .section-header {
+      padding-block: 10px;
+    }
+  }
+}

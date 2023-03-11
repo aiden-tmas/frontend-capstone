@@ -7,12 +7,11 @@ export default function Product(props) {
   const { addProduct } = useContext(CartContext);
 
   return (
-    <div className={"products"}>
+    <div className={"product"}>
       <RenderProduct
         addProduct={addProduct}
         id={`${props.match.params.prod_id}`}
       />
-      ;
     </div>
   );
 }

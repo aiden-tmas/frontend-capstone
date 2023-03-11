@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-// import { Link } from "react-router-dom";
+
+import "../styles/product.scss";
 
 export default function RenderProduct(props) {
   const [product, setProduct] = useState({});
@@ -14,13 +15,13 @@ export default function RenderProduct(props) {
   }, [props.id]);
 
   return (
-    <div>
-      <div>
+    <div className="product-card">
+      <div className="product-wrapper">
         <div className="item-title-description">
+          <img src={product.image} alt={"product"} className="product-image" />
           <h1>{product.title}</h1>
           <h3>{product.description}</h3>
         </div>
-        <img src={product.image} alt={"product"} />
       </div>
       <div className="button-wrapper">
         <button
